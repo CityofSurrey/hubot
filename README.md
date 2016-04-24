@@ -3,7 +3,7 @@
 [![Circle CI](https://circleci.com/gh/CityofSurrey/lurtz.svg?style=svg&circle-token=88700927e722d21d1625f1ff699fb3561af50d2b)](https://circleci.com/gh/CityofSurrey/lurtz)
 <a href="https://codeclimate.com/github/CityofSurrey/lurtz"><img src="https://codeclimate.com/github/CityofSurrey/lurtz/badges/gpa.svg" /></a>
 
-Lurtz is a chat bot built using Hubot framework.
+Lurtz is a chat bot built using a Hubot framework.
 
 ### Running Lurtz Locally
 
