@@ -11,6 +11,6 @@ WORKDIR /app
 COPY app /app/
 RUN npm install --no-optional
 
-CMD bin/hubot --adapter slack
+CMD npm start
 
 EXPOSE 80

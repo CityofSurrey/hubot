@@ -3,3 +3,4 @@ node_modules/
 .hubot_history
 project.sublime-workspace
 test-results.xml
+coverage
