@@ -52,7 +52,7 @@ describe('thank-you script', () => {
   it('should reply when user says "thank you @bot"', () => {
     return room.user.say('saruman', 'thank you @hubot').then(() => {
       expect(room.messages[1][0]).to.equal('hubot')
-      expect(room.messages[1][1]).to.equal('')
+      expect(room.messages[1][1]).not.to.equal('')
     })
   })
 })
