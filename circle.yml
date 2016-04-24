@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build --tag=cityofsurrey/${CIRCLE_PROJECT_REPONAME} --file=build-pipeline/build/Dockerfile .
+
+test:
+  override:
+    - docker run -d -p 80:80 -e cityofsurrey/${CIRCLE_PROJECT_REPONAME}
+
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - docker login --email=${DOCKER_EMAIL} --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
+      - docker push cityofsurrey/${CIRCLE_PROJECT_REPONAME}

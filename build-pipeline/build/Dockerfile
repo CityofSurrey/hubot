@@ -1,0 +1,14 @@
+FROM node
+
+ENV NPM_CONFIG_LOGLEVEL error
+ENV NPM_CONFIG_REGISTRY http://registry.npmjs.org/
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY app /app/
+RUN npm install --no-optional
+
+CMD bin/hubot --adapter slack
+
+EXPOSE 80
