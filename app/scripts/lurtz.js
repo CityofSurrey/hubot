@@ -6,7 +6,7 @@ export default (robot) => {
     res.reply('SARUMAN!')
   })
 
-  robot.respond(/who are you?/i, (res) => {
+  robot.respond(/who are you/i, (res) => {
     res.reply('I am Lurtz - the first of Saruman\'s Uruk-hai to be bred, ' +
               'choking the first Orc I see to death within seconds of my birth.')
   })

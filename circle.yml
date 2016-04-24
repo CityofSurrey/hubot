@@ -8,7 +8,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 80:80 cityofsurrey/${CIRCLE_PROJECT_REPONAME}
+    - docker run cityofsurrey/${CIRCLE_PROJECT_REPONAME} npm test
 
 deployment:
   dockerhub:
