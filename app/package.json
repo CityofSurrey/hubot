@@ -7,9 +7,7 @@
   "scripts": {
     "start": "bin/hubot --adapter slack",
     "dev": "bin/hubot",
-    "test": "mocha --compilers js:babel-core/register,coffee:coffee-script/register",
-    "testx": "babel-node ./node_modules/.bin/isparta cover _mocha",
-    "test:report": "mocha --compilers js:babel-core/register --reporter mocha-junit-reporter"
+    "test": "mocha --compilers js:babel-core/register,coffee:coffee-script/register"
   },
   "repository": {
     "type": "git",
@@ -21,28 +19,29 @@
   },
   "dependencies": {
     "dockercloud": "^0.2.0",
-    "hubot": "^2.18.0",
+    "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
-    "hubot-help": "^0.1.3",
+    "hubot-help": "^0.2.0",
     "hubot-redis-brain": "0.0.3",
-    "hubot-slack": "^3.4.2"
+    "hubot-slack": "^3.4.2",
+    "landscape-node": "^0.1.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.7.7",
-    "babel-eslint": "^6.0.3",
-    "babel-plugin-add-module-exports": "^0.1.2",
-    "babel-polyfill": "^6.7.4",
+    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-add-module-exports": "^0.2.0",
+    "babel-polyfill": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.7.2",
+    "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "coffee-script": "^1.10.0",
-    "eslint": "^2.8.0",
-    "eslint-config-airbnb": "^8.0.0",
-    "eslint-plugin-import": "^1.5.0",
-    "eslint-plugin-jsx-a11y": "^1.0.2",
-    "eslint-plugin-react": "^5.0.1",
-    "hubot": "^2.18.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "hubot": "^2.19.0",
     "hubot-test-helper": "^1.4.4",
     "isparta": "^4.0.0",
     "mocha": "^2.4.5"
