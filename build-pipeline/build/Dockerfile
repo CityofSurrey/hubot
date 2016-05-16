@@ -3,15 +3,13 @@ FROM node:slim
 ENV NPM_CONFIG_LOGLEVEL error
 ENV NPM_CONFIG_REGISTRY http://registry.npmjs.org/
 
-ENV HUBOT_SLACK_TOKEN ""
-ENV DOCKER_USERNAME ""
-ENV DOCKER_PASSWORD ""
-
 RUN mkdir /app
 WORKDIR /app
 
-COPY app /app/
+COPY app/package.json /app/
 RUN npm install --no-optional
+
+COPY app /app/
 
 CMD npm start
 

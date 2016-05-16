@@ -1,6 +1,6 @@
 # Lurtz
 
-[![Circle CI](https://circleci.com/gh/CityofSurrey/lurtz.svg?style=svg&circle-token=88700927e722d21d1625f1ff699fb3561af50d2b)](https://circleci.com/gh/CityofSurrey/lurtz)
+[![Circle CI](https://circleci.com/gh/cityofsurrey/lurtz.svg?style=svg&circle-token=88700927e722d21d1625f1ff699fb3561af50d2b)](https://circleci.com/gh/cityofsurrey/lurtz)
 <a href="https://codeclimate.com/github/CityofSurrey/lurtz"><img src="https://codeclimate.com/github/CityofSurrey/lurtz/badges/gpa.svg" /></a>
 
 Lurtz is a chat bot built using a Hubot framework.
@@ -14,24 +14,25 @@ You can start Lurtz locally by running:
 
     $ bin/hubot
 
-You'll see some start up output and a prompt:
-
-    [Sat Feb 28 2015 12:38:27 GMT+0000 (GMT)] INFO Using default redis on localhost:6379
-    lurtz>
-
 Then you can interact with Lurtz by typing `lurtz help`.
 
     lurtz> lurtz help
-    ...
 
-### Configuration
+### Environment Variables
 
-A few scripts (including some installed by default) require environment
-variables to be set as a simple form of configuration.
+All environment variables are **required**.
 
-Each script should have a commented header which contains a "Configuration"
-section that explains which values it requires to be placed in which variable.
+| Variable | Description |
+| -------- | ----------- |
+| `HUBOT_SLACK_TOKEN` | API token for the Slack user. |
+| `DOCKER_USERNAME` | Username for Dockercloud API. |
+| `DOCKER_PASSWORD` | API key for Dockercloud API. |
+| `LANDSCAPE_API_KEY` | API key for Landscape API. |
+| `LANDSCAPE_API_SECRET` | API secret for Landscape API. |
 
-How to set environment variables will be specific to your operating system.
-Rather than recreate the various methods and best practices in achieving this,
-it's suggested that you search for a dedicated guide focused on your OS.
+### Volumes
+
+In order for Lurtz to run docker containers required by **landscape-node**, you need to specify following volumes when running a container:
+
+- `/var/run/docker.sock:/var/run/docker.sock`
+- `$(which docker):/usr/bin/docker`
